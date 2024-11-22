@@ -1,0 +1,125 @@
+/* ===================CSS Variables================= */
+
+:root {
+  --primary-color: #0044cc;
+  --secondary-color: #003399;
+  --background-color: #f4f4f4;
+  --text-color: #333333;
+  --heading-color: #222222;
+  --card-bg-color: #ffffff;
+  --button-bg-color: #0044cc;
+  --button-hover-color: #003399;
+  --border-color: #dddddd;
+}
+
+/* ====================Global Reset===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==================General Reusable Styles================= */
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+}
+
+.navbar a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+#question {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  padding: 1%;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+}
+
+.option:hover {
+  background-color: var(--button-hover-color);
+}
+
+#result {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
