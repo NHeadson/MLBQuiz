@@ -90,10 +90,11 @@ ul {
 
 /* ==================General Reusable Styles================= */
 
+
 header {
   background-color: var(--primary-color);
   color: var(--background-color);
-  padding: 1rem 0;
+  padding: .25rem 0;
   text-align: center;
 }
 
@@ -115,39 +116,72 @@ header {
   cursor: pointer;
 }
 
-.quiz-container {
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 1rem;
-  margin: 10% auto 65% auto;
-}
-
-#question {
+#quiz-selection {
+  width: 70%;
   font-size: 2rem;
   font-weight: bolder;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   background-color: var(--card-bg-color);
   color: var(--heading-color);
   border: 2px solid var(--heading-color);
   border-radius: 15px;
-  margin-bottom: 1rem;
+  margin: 8% auto 10% auto;
+}
+
+#quiz-selection > button {
+  padding: 1.5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50%;
+  margin: 1% auto;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  transition: background-color 1s;
+}
+
+#quiz-selection > button:hover {
+  background-color: var(--button-hover-color);
+  transition: 0.5s ease-in-out;
+  transform: scale(1.05);
+}
+
+#quiz-container {
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto 1% auto;
+}
+
+#question {
+  font-size: 1.75rem;
+  font-weight: bolder;
+  padding: .5rem;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  color: var(--heading-color);
+  border: 2px solid var(--heading-color);
+  border-radius: 15px;
+  margin: 1% auto 0 auto
 }
 
 .options-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 75%;
+  gap: 0.75rem;
+  max-width: 50%;
   padding: 0 auto;
-  margin: 15% auto 0 auto;
+  margin: 3% auto 0 auto;
 }
 
 .option {
   padding: 2%;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
   cursor: pointer;
   background-color: var(--button-bg-color);
   color: var(--text-color);

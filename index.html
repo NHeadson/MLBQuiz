@@ -10,22 +10,22 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to My Project</h1>
+      <h1>Welcome to Nick's MLB Quiz!</h1>
     </header>
     <nav class="navbar">
-      <ul>
-        <li><a></a></li>
-      </ul>
+      <ul></ul>
     </nav>
     <main class="container">
-      <div class="quiz-container">
+      <div id="quiz-selection">
+        <h2>Select Quiz:</h2>
+        <button id="easyQuiz">Easy MLB</button>
+        <button id="hardQuiz">Hard MLB</button>
+      </div>
+      <div id="quiz-container" style="display: none;">
         <section>
           <h1 id="question"></h1>
         </section>
-
-        <div id="options" class="options-container">
-        
-        </div>
+        <div id="options" class="options-container"></div>
         <p id="result"></p>
       </div>
     </main>
