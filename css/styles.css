@@ -54,38 +54,31 @@ Blue & White
   box-sizing: border-box;
 }
 
+html, body {
+  min-width: 400px;    /* Prevent the page from shrinking below 400px */
+  height: 100%;        /* Ensure it still adapts for larger screens */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background: transparent url("/images/baseball-bgd.jpg") no-repeat scroll 50% 50%;
 }
 
 main {
-  max-width: 80%;
-  padding: 0 2%;
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-li {
-  float: left;
-}
-
-a {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25%;
 }
 
 /* ==================General Reusable Styles================= */
@@ -94,8 +87,11 @@ ul {
 header {
   background-color: var(--primary-color);
   color: var(--background-color);
-  padding: .25rem 0;
+}
+
+header, footer {
   text-align: center;
+  padding: 10px;
 }
 
 .navbar {
@@ -106,19 +102,21 @@ header {
   background-color: var(--secondary-color);
 }
 
-.navbar a {
-  color: white;
-  margin: 0 0.5rem;
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+h2  {
+  font-weight: bolder;
+  line-height: 2.5;
+  color: var(--heading-color);
 }
 
 #quiz-selection {
   width: 70%;
-  font-size: 2rem;
   font-weight: bolder;
   padding: 1.5rem;
   text-align: center;
@@ -126,12 +124,11 @@ header {
   color: var(--heading-color);
   border: 2px solid var(--heading-color);
   border-radius: 15px;
-  margin: 8% auto 10% auto;
+  margin: 0 auto;
 }
 
 #quiz-selection > button {
   padding: 1.5%;
-  font-size: 1.5rem;
   font-weight: bold;
   width: 50%;
   margin: 1% auto;
@@ -152,11 +149,10 @@ header {
 #quiz-container {
   text-align: center;
   padding: 1rem;
-  margin: 0 auto 1% auto;
+  margin: 0 auto;
 }
 
 #question {
-  font-size: 1.75rem;
   font-weight: bolder;
   padding: .5rem;
   text-align: center;
@@ -164,7 +160,7 @@ header {
   color: var(--heading-color);
   border: 2px solid var(--heading-color);
   border-radius: 15px;
-  margin: 1% auto 0 auto
+  margin: 0 auto;
 }
 
 .options-container {
@@ -173,12 +169,11 @@ header {
   gap: 0.75rem;
   max-width: 50%;
   padding: 0 auto;
-  margin: 3% auto 0 auto;
+  margin: 0 auto;
 }
 
 .option {
   padding: 2%;
-  font-size: 1.25rem;
   font-weight: bold;
   width: 100%;
   margin: 0 auto;
@@ -197,7 +192,6 @@ header {
 }
 
 #result {
-  font-size: 2rem;
   margin-top: 1rem;
 }
 
@@ -205,7 +199,57 @@ footer {
   background-color: var(--primary-color);
   color: var(--text-color);
   font-weight: bold;
-  text-align: center;
-  padding: 1rem 0;
 }
+
+
+
+/* 
+=====================Media Queries========================
+*/
+
+@media (max-width: 700px) {
+
+  body {
+    font-size: 14px; /* Reduce the font size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust h2 font size */
+  }
+}
+
+@media (max-width: 700px) and (min-width: 400px) {
+  body {
+    font-size: 10px; /* Further reduce font size */
+  }
+
+  .container {
+    max-width: 400px; /* Lock content width at 400px */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 0;
+  }
+
+  #quiz-selection {
+    width: 85%;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    transform: scale(0.9); /* Slightly shrink the entire page for small screens */
+    transform-origin: top center; /* Keep scaling consistent from the top */
+  }
+
+  #quiz-selection > button {
+    width: 80%;
+    margin: 3% auto;
+  }
+}
+
+
+
 
